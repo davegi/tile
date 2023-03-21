@@ -108,6 +108,7 @@ func (v *View[T]) Close() error {
 }
 
 // onUpdate occurs when a tile has updated.
+//lint:ignore U1000 Used as Subscribe(&observer)
 func (v *View[T]) onUpdate(ev *Update[T]) {
 	if v.rect.Contains(ev.Point) {
 		v.Inbox <- *ev // (copy)

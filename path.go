@@ -87,7 +87,7 @@ func (m *Grid[T]) Path(from, to Point, costOf costFn) ([]Point, int, bool) {
 		if current.Equal(to) {
 			dist := int(edges[current.Integer()].Cost)
 			path := make([]Point, 0, dist)
-			curr, _ := edges[current.Integer()]
+			curr := edges[current.Integer()]
 			for !curr.Point.Equal(from) {
 				path = append(path, curr.Point)
 				curr = edges[curr.Point.Integer()]

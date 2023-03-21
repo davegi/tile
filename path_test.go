@@ -232,10 +232,10 @@ func costOf(tile Value) uint16 {
 // mapFrom creates a map from ASCII string
 func mapFrom(name string) *Grid[string] {
 	f, err := os.Open("fixtures/" + name)
-	defer f.Close()
 	if err != nil {
 		panic(err)
 	}
+	defer f.Close()
 
 	// Decode the image
 	img, err := png.Decode(f)

@@ -192,6 +192,7 @@ func TestStateUpdates(t *testing.T) {
 
 type fakeView[T comparable] func(*Update[T])
 
+//lint:ignore U1000 Used as Subscribe(&observer)
 func (f fakeView[T]) onUpdate(e *Update[T]) {
 	f(e)
 }

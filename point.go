@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-const invalid = int16(-1 << 15)
+// const invalid = int16(-1 << 15)
 
 // -----------------------------------------------------------------------------
 
@@ -162,7 +162,7 @@ func (r *Rect) Size() Point {
 
 // -----------------------------------------------------------------------------
 
-// Diretion represents a direction
+// Direction represents a direction
 type Direction byte
 
 // Various directions
